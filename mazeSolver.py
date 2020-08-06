@@ -20,9 +20,6 @@ if width <= 0 or height <= 0:
     print("Maze Dimensions too Small")
     exit()
 
-print(sheet.cell(height+8,4).value)
-print(sheet[sheet.cell(height+8,4).value].column)
-print(sheet[sheet.cell(height+8,4).value].row)
 startingCell = MazeTreeNode(sheet[sheet.cell(height+8,4).value].row, sheet[sheet.cell(height+8,4).value].column)
 nullCell = MazeTreeNode()
 nullCell.insertNode(startingCell)
